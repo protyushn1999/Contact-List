@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <script src="https://kit.fontawesome.com/c622d74338.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <h1 id = "heading">
+        <i class = "fas fa-address-book"></i>
+        Contact List</h1>
+        <h5>Made with <img src="/heart copy.png" alt="" width="15px" height="15px"> by Protyush</h5>
+    <div>
+        <ul>
+            <% for(let i of contact_list) {%>
+                <li>
+                    
+                       <p><%= i.name %></p> 
+                       <p><%= i.phone %></p>
+                       
+    
+                </li>
+                 <!-- <a href = "/delete-contact/<%= i.phone %>">
+                    <i class = 'fas fa-trash'>  </i>
+                 </a>  -->
+                 <a href = "/delete-contact/?id=<%= i._id %>">
+                    <i class = 'fas fa-trash'>  </i>
+                 </a>
+               
+
+                <% } %>
+        </ul>
+    </div>
+    <hr style="width: 80%;">
+    <div>
+        <form action="/create-contact" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" id="name" placeholder="Enter name" required />
+                <input type="number" name="phone" id="phone" placeholder="Enter phone number" required />
+            </div>
+            
+
+            <button type="submit" id="submit" >Add</button>
+        </form>
+    </div>
+
+    <script src="/home.js"></script>
+    <script src="https://kit.fontawesome.com/c622d74338.js" crossorigin="anonymous"></script>
+</body>
+</html>
