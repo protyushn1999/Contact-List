@@ -1,5 +1,5 @@
 # Contact-List
-A simple Todo Web App made using Express JS
+A simple Contact List Web App made using Express JS
 
 # How to use
 * Get NodeJs on your System.
